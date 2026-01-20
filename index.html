@@ -3,20 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Início</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <meta name="description" content="ATENA - Sistema de Gestão do NUARTE - IFRN Campus Santa Cruz">
+    <title>ATENA - NUARTE (IFRN Campus Santa Cruz) - Sistema de Gestão</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="about.html">Sobre Nós</a></li>
-        </ul>
+    <nav class="sticky top-0 z-20 backdrop-blur bg-blue-950/80 border-b border-yellow-700">
+        <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between text-slate-100">
+            <div class="font-semibold tracking-wide text-yellow-400 text-xl">Atena</div>
+            <ul class="flex gap-5 text-sm">
+                <li><a class="text-yellow-400 font-semibold" aria-current="page" href="index.html">Início</a></li>
+                <li><a class="hover:text-yellow-400 transition" href="login.html">Login</a></li>
+                <li><a class="hover:text-yellow-400 transition" href="about.html">Sobre Nós</a></li>
+            </ul>
+        </div>
     </nav>
-    <img class="logo" src="img/NuarteLogo.png" alt="Logo do Núcleo de Arte">
-<h1>Bem vindos ao Ambiente de técnico e Estoque do Núcleo de Arte</h1>
-<p>Utilize o menu acima para navegar pelas diferentes seções do sistema.</p>
-<p>Se precisar de ajuda, consulte a seção de ajuda ou entre em contato com o suporte.</p>
+    <main class="min-h-[calc(100vh-64px)] bg-gradient-to-b from-blue-950 to-slate-950 text-slate-100">
+        <section class="max-w-5xl mx-auto px-4 py-12 grid md:grid-cols-2 gap-10 items-center">
+            <div class="space-y-4">
+                <p class="text-xs uppercase tracking-[0.25em] text-yellow-400">Bem-vindos ao NUARTE</p>
+                <h1 class="text-3xl md:text-4xl font-bold leading-tight">ATENA - Sistema de Gestão<br/>NUARTE/IFRN Santa Cruz</h1>
+                <p class="text-slate-300">Ambiente técnico e controle de estoque para o Núcleo de Arte do IFRN Campus Santa Cruz.</p>
+                <div class="flex gap-3 flex-wrap">
+                    <a class="px-4 py-3 rounded-xl bg-gradient-to-r from-yellow-400 to-yellow-500 text-blue-950 font-semibold shadow-lg shadow-yellow-500/30 hover:shadow-yellow-400/40 transition" href="login.html">Entrar</a>
+                    <a class="px-4 py-3 rounded-xl border border-yellow-700 text-yellow-200 hover:border-yellow-400 hover:text-yellow-300 transition" href="about.html">Sobre Atena</a>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class="text-center">
+                    <div class="text-6xl mb-4"></div>
+                    <p class="text-yellow-400 font-bold tracking-wide text-2xl">ATENA</p>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>

@@ -1,30 +1,44 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="h-full">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Login</title>
-  <link rel="stylesheet" href="Css/styles.css">
+  <meta name="description" content="ATENA - Sistema de Gestão do NUARTE - IFRN Campus Santa Cruz">
+  <title>ATENA - NUARTE (IFRN Campus Santa Cruz) | Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="about.html">Sobre Nós</a></li>
-        </ul>
-    </nav>
-  <div class="login-container">
-    <img src="img/NuarteLogo.png" class="logo" alt="Logo">
-    <form class="login-form" action="#" method="post">
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required>
+<body class="h-full bg-gradient-to-b from-blue-950 to-slate-950 text-slate-100">
+  <nav class="sticky top-0 z-20 backdrop-blur bg-blue-950/80 border-b border-yellow-700">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="font-semibold tracking-wide text-yellow-400 text-lg">Atena</div>
+      <ul class="flex gap-5 text-sm">
+        <li><a class="hover:text-yellow-400 transition" href="index.html">Início</a></li>
+        <li><a class="text-yellow-400 font-semibold" aria-current="page" href="login.html">Login</a></li>
+        <li><a class="hover:text-yellow-400 transition" href="about.html">Sobre Nós</a></li>
+      </ul>
+    </div>
+  </nav>
 
-      <label for="password">Senha</label>
-      <input type="password" id="password" name="password" required>
-
-      <button type="submit" class="btn">Entrar</button>
-    </form>
-  </div>
+  <main class="min-h-[calc(100vh-64px)] flex items-center justify-center px-4 py-12">
+    <section class="w-full max-w-md bg-blue-900 border border-yellow-700 rounded-2xl shadow-2xl shadow-yellow-500/10 p-8 space-y-4">
+      <div class="space-y-1 text-center">
+        <p class="text-2xl mb-2"></p>
+        <p class="text-xs uppercase tracking-[0.2em] text-yellow-400">Acesso Restrito</p>
+        <h1 class="text-2xl font-bold">Autenticação</h1>
+        <p class="text-sm text-slate-400">Faça login para acessar o sistema ATENA.</p>
+      </div>
+      <form class="space-y-4" method="POST" action="login.php">
+        <label class="block space-y-1" for="email">
+          <span class="text-sm font-medium text-yellow-200">Email</span>
+          <input id="email" type="email" name="email" required class="w-full px-3 py-2 rounded-xl bg-blue-950 border border-yellow-700 focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/40 outline-none transition" />
+        </label>
+        <label class="block space-y-1" for="senha">
+          <span class="text-sm font-medium text-yellow-200">Senha</span>
+          <input id="senha" type="password" name="senha" required class="w-full px-3 py-2 rounded-xl bg-blue-950 border border-yellow-700 focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/40 outline-none transition" />
+        </label>
+        <button type="submit" class="w-full py-3 rounded-xl bg-gradient-to-r from-yellow-400 to-yellow-500 text-blue-950 font-semibold shadow-lg shadow-yellow-500/30 hover:shadow-yellow-400/40 transition">Acessar</button>
+      </form>
+    </section>
+  </main>
 </body>
 </html>
