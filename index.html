@@ -4,38 +4,124 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="ATENA - Sistema de Gestão do NUARTE - IFRN Campus Santa Cruz">
-    <title>ATENA - NUARTE (IFRN Campus Santa Cruz) - Sistema de Gestão</title>
+    <title>ATENA • NUARTE | Gestão de Acervo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              display: ['"Space Grotesk"', 'system-ui', 'sans-serif']
+            },
+            colors: {
+              brand: {
+                50: '#fefce8',
+                100: '#fef9c3',
+                400: '#facc15',
+                500: '#eab308'
+              }
+            }
+          }
+        }
+      }
+    </script>
 </head>
-<body>
-    <nav class="sticky top-0 z-20 backdrop-blur bg-blue-950/80 border-b border-yellow-700">
-        <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between text-slate-100">
-            <div class="font-semibold tracking-wide text-yellow-400 text-xl">Atena</div>
-            <ul class="flex gap-5 text-sm">
-                <li><a class="text-yellow-400 font-semibold" aria-current="page" href="index.html">Início</a></li>
-                <li><a class="hover:text-yellow-400 transition" href="login.html">Login</a></li>
-                <li><a class="hover:text-yellow-400 transition" href="about.html">Sobre Nós</a></li>
-            </ul>
-        </div>
-    </nav>
-    <main class="min-h-[calc(100vh-64px)] bg-gradient-to-b from-blue-950 to-slate-950 text-slate-100">
-        <section class="max-w-5xl mx-auto px-4 py-12 grid md:grid-cols-2 gap-10 items-center">
-            <div class="space-y-4">
-                <p class="text-xs uppercase tracking-[0.25em] text-yellow-400">Bem-vindos ao NUARTE</p>
-                <h1 class="text-3xl md:text-4xl font-bold leading-tight">ATENA - Sistema de Gestão<br/>NUARTE/IFRN Santa Cruz</h1>
-                <p class="text-slate-300">Ambiente técnico e controle de estoque para o Núcleo de Arte do IFRN Campus Santa Cruz.</p>
-                <div class="flex gap-3 flex-wrap">
-                    <a class="px-4 py-3 rounded-xl bg-gradient-to-r from-yellow-400 to-yellow-500 text-blue-950 font-semibold shadow-lg shadow-yellow-500/30 hover:shadow-yellow-400/40 transition" href="login.html">Entrar</a>
-                    <a class="px-4 py-3 rounded-xl border border-yellow-700 text-yellow-200 hover:border-yellow-400 hover:text-yellow-300 transition" href="about.html">Sobre Atena</a>
+<body class="bg-slate-950 text-slate-100 font-display">
+    <nav class="sticky top-0 z-30 backdrop-blur bg-slate-950/80 border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-brand-500/15 border border-brand-500/40 flex items-center justify-center text-brand-400 font-bold">AT</div>
+                <div>
+                    <p class="text-sm text-slate-300">Atena • NUARTE</p>
+                    <p class="text-xs text-slate-500">IFRN Campus Santa Cruz</p>
                 </div>
             </div>
-            <div class="flex justify-center">
-                <div class="text-center">
-                    <div class="text-6xl mb-4"></div>
-                    <p class="text-yellow-400 font-bold tracking-wide text-2xl">ATENA</p>
+            <div class="flex items-center gap-6 text-sm font-medium">
+                <a class="text-brand-400" aria-current="page" href="index.html">Início</a>
+                <a class="hover:text-brand-400 transition" href="figurinos.html">Acervo</a>
+                <a class="hover:text-brand-400 transition" href="about.html">Sobre</a>
+                <a class="px-3 py-2 rounded-lg bg-brand-500 text-slate-900 font-semibold hover:bg-brand-400 transition" href="login.html">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="relative overflow-hidden">
+        <div class="absolute inset-0 -z-10 opacity-60">
+            <div class="w-96 h-96 bg-brand-500/10 blur-3xl rounded-full absolute -top-20 -left-10"></div>
+            <div class="w-[28rem] h-[28rem] bg-sky-500/10 blur-3xl rounded-full absolute bottom-0 right-0"></div>
+        </div>
+
+        <section class="max-w-6xl mx-auto px-4 py-12 md:py-16 grid lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/15 border border-brand-500/30 text-brand-300 text-xs font-semibold uppercase tracking-[0.2em]">Gestão oficial do acervo</div>
+                <div class="space-y-3">
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight text-brand-100">ATENA, o painel único do NUARTE</h1>
+                    <p class="text-lg text-slate-300">Controle de figurinos, adereços, instrumentos, laboratório de música, cenografia e livros. Tudo organizado, com acesso seguro e fluxo simples.</p>
+                </div>
+                <div class="flex flex-wrap gap-3">
+                    <a class="px-5 py-3 rounded-xl bg-brand-500 text-slate-900 font-semibold shadow-lg shadow-brand-500/25 hover:bg-brand-400 transition" href="figurinos.html">Ir para o Acervo</a>
+                    <a class="px-5 py-3 rounded-xl border border-slate-700 text-slate-200 hover:border-brand-400 hover:text-brand-200 transition" href="login.html">Área do bolsista</a>
+                    <a class="px-5 py-3 rounded-xl text-slate-300 hover:text-brand-200 transition" href="about.html">Sobre o NUARTE</a>
+                </div>
+                </div>
+            </div>
+            <div class="bg-slate-900/70 border border-slate-800 rounded-2xl p-6 md:p-8 shadow-2xl shadow-brand-500/10">
+                <div class="flex items-center justify-between mb-6">
+                    <div>
+                        <p class="text-sm text-slate-400">Visão geral</p>
+                        <h2 class="text-2xl font-semibold text-brand-100">Painel do acervo</h2>
+                    </div>
+                    <div class="px-3 py-1 rounded-full bg-brand-500/20 text-brand-200 text-xs font-semibold uppercase tracking-[0.15em]">ativo</div>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between rounded-xl bg-slate-800/80 border border-slate-700 px-4 py-3">
+                        <div>
+                            <p class="text-xs uppercase text-slate-400 tracking-[0.2em]">Acesso rápido</p>
+                            <p class="text-lg font-semibold text-slate-100">Abrir acervo</p>
+                        </div>
+                        <a href="figurinos.html" class="px-4 py-2 rounded-lg bg-brand-500 text-slate-900 font-semibold hover:bg-brand-400 transition">Entrar</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-6xl mx-auto px-4 pb-12 md:pb-16 space-y-8">
+            <div class="flex flex-wrap items-center justify-between gap-4">
+                <div>
+                    <p class="text-xs uppercase tracking-[0.2em] text-brand-300">Fluxo completo</p>
+                    <h2 class="text-2xl font-semibold text-brand-100">O que você encontra no ATENA</h2>
+                </div>
+                <a href="about.html" class="text-sm text-brand-300 hover:text-brand-200 transition">Saiba mais sobre o NUARTE →</a>
+            </div>
+            <div class="grid md:grid-cols-3 gap-4">
+                <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800">
+                    <h3 class="text-lg font-semibold text-brand-100">Acervo organizado</h3>
+                    <p class="text-slate-400 text-sm">Visualize itens por categoria com campos específicos para cada tipo de material.</p>
+                </div>
+                <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800">
+                    <h3 class="text-lg font-semibold text-brand-100">Formulário único</h3>
+                    <p class="text-slate-400 text-sm">Adição e edição em um só fluxo, sem confusão entre telas.</p>
+                </div>
+                <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800">
+                    <h3 class="text-lg font-semibold text-brand-100">Permissões claras</h3>
+                    <p class="text-slate-400 text-sm">Bolsistas gerenciam dados; demais usuários consultam com segurança.</p>
                 </div>
             </div>
         </section>
     </main>
+
+    <footer class="border-t border-slate-900 bg-slate-950">
+        <div class="max-w-6xl mx-auto px-4 py-6 flex flex-wrap items-center justify-between text-sm text-slate-500">
+            <span>ATENA • NUARTE · IFRN Campus Santa Cruz</span>
+            <div class="flex gap-4">
+                <a class="hover:text-brand-300 transition" href="about.html">Sobre</a>
+                <a class="hover:text-brand-300 transition" href="figurinos.html">Acervo</a>
+                <a class="hover:text-brand-300 transition" href="login.html">Login</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

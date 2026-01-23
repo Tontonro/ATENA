@@ -4,124 +4,144 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Conheça o NUARTE - Núcleo de Arte do IFRN Campus Santa Cruz">
-    <title>NUARTE - Núcleo de Arte (IFRN Campus Santa Cruz) | Sobre</title>
+    <title>ATENA • NUARTE | Sobre</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        :root {
-            color-scheme: light dark;
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { display: ['"Space Grotesk"', 'system-ui', 'sans-serif'] },
+            colors: {
+              brand: { 50: '#fefce8', 100: '#fef9c3', 400: '#facc15', 500: '#eab308' }
+            }
+          }
         }
-        html.light-mode {
-            color-scheme: light;
-        }
-        html.dark-mode {
-            color-scheme: dark;
-        }
-    </style>
+      }
+    </script>
 </head>
-<body class="dark-mode bg-gradient-to-b from-blue-950 to-slate-950 dark-mode:from-blue-950 dark-mode:to-slate-950 light-mode:from-white light-mode:to-gray-50 text-slate-100 dark-mode:text-slate-100 light-mode:text-gray-900 transition-colors duration-300">
-    <nav class="sticky top-0 z-20 backdrop-blur bg-blue-950/80 border-b border-yellow-700 dark-mode:bg-blue-950/80 dark-mode:border-yellow-700 light-mode:bg-white/80 light-mode:border-gray-300 transition-colors duration-300">
-        <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
-            <div class="font-semibold tracking-wide text-yellow-400 dark-mode:text-yellow-400 light-mode:text-amber-600 text-lg">Atena</div>
-            <div class="flex items-center gap-5">
-                <ul class="flex gap-5 text-sm">
-                    <li><a class="hover:text-yellow-400 dark-mode:hover:text-yellow-400 light-mode:hover:text-amber-700 transition text-slate-100 dark-mode:text-slate-100 light-mode:text-gray-700" href="index.html">Início</a></li>
-                    <li><a class="hover:text-yellow-400 dark-mode:hover:text-yellow-400 light-mode:hover:text-amber-700 transition text-slate-100 dark-mode:text-slate-100 light-mode:text-gray-700" href="login.html">Login</a></li>
-                    <li><a class="text-yellow-400 dark-mode:text-yellow-400 light-mode:text-amber-600 font-semibold" aria-current="page" href="about.html">Sobre Nós</a></li>
-                </ul>
+<body class="bg-slate-950 text-slate-100 font-display">
+    <nav class="sticky top-0 z-30 backdrop-blur bg-slate-950/80 border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-brand-500/15 border border-brand-500/40 flex items-center justify-center text-brand-400 font-bold">AT</div>
+                <div>
+                    <p class="text-sm text-slate-300">Atena • NUARTE</p>
+                    <p class="text-xs text-slate-500">IFRN Campus Santa Cruz</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-6 text-sm font-medium">
+                <a class="hover:text-brand-400 transition" href="index.html">Início</a>
+                <a class="hover:text-brand-400 transition" href="figurinos.html">Acervo</a>
+                <a class="text-brand-400" aria-current="page" href="about.html">Sobre</a>
+                <a class="px-3 py-2 rounded-lg bg-brand-500 text-slate-900 font-semibold hover:bg-brand-400 transition" href="login.html">Login</a>
             </div>
         </div>
     </nav>
 
-    <main class="min-h-[calc(100vh-64px)] bg-gradient-to-b from-blue-950 to-slate-950 dark-mode:from-blue-950 dark-mode:to-slate-950 light-mode:from-white light-mode:to-gray-50 text-slate-100 dark-mode:text-slate-100 light-mode:text-gray-900 transition-colors duration-300">
-        <section class="max-w-5xl mx-auto px-4 py-12 space-y-8">
-            <div class="space-y-4 text-center">
-                <div class="text-4xl mb-4"></div>
-                <p class="text-yellow-400 dark-mode:text-yellow-400 light-mode:text-amber-600">Conheça o NUARTE</p>
-                <h1 class="text-4xl md:text-5xl font-bold leading-tight">Núcleo de Arte - IFRN Campus Santa Cruz</h1>
-                <p class="text-slate-300 dark-mode:text-slate-300 light-mode:text-slate-700 text-lg">O NUARTE é um espaço institucional dedicado à promoção, articulação e fomento de atividades artísticas, culturais e formativas voltadas para estudantes, servidores e a comunidade.</p>
+    <main class="relative overflow-hidden">
+        <div class="absolute inset-0 -z-10 opacity-60">
+            <div class="w-[26rem] h-[26rem] bg-brand-500/10 blur-3xl rounded-full absolute -top-20 -left-10"></div>
+            <div class="w-[30rem] h-[30rem] bg-sky-500/10 blur-3xl rounded-full absolute bottom-0 right-0"></div>
+        </div>
+
+        <section class="max-w-6xl mx-auto px-4 py-12 md:py-16 space-y-10">
+            <div class="space-y-4 text-left md:text-center">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/15 border border-brand-500/30 text-brand-300 text-xs font-semibold uppercase tracking-[0.2em]">NUARTE · IFRN</div>
+                <h1 class="text-4xl md:text-5xl font-bold text-brand-100 leading-tight">Núcleo de Arte do IFRN Campus Santa Cruz</h1>
+                <p class="text-lg text-slate-300 md:max-w-3xl md:mx-auto">Espaço institucional dedicado às ações artísticas e culturais do campus.</p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="space-y-3 p-6 bg-blue-900/50 dark-mode:bg-blue-900/50 light-mode:bg-amber-100/50 rounded-xl border border-yellow-700/30 dark-mode:border-yellow-700/30 light-mode:border-amber-600/30">
-                    <h2 class="text-2xl font-bold text-yellow-400 dark-mode:text-yellow-400 light-mode:text-amber-600">Missão e Objetivos</h2>
-                    <p class="text-slate-300 dark-mode:text-slate-300 light-mode:text-slate-700">O NUARTE tem como objetivo contribuir para a formação estética, crítica, cultural e cidadã, através de projetos de extensão, oficinas, mostras, cursos, exposições, apresentações e ações que ampliem o acesso à produção artística e cultural.</p>
+            <div class="grid md:grid-cols-3 gap-4">
+                <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800">
+                    <p class="text-xs uppercase tracking-[0.2em] text-slate-400">Missão</p>
+                    <h3 class="text-xl font-semibold text-brand-100">Arte no campus</h3>
+                    <p class="text-slate-400 text-sm">Integração de ensino e extensão.</p>
                 </div>
-                <div class="space-y-3 p-6 bg-blue-900/50 dark-mode:bg-blue-900/50 light-mode:bg-amber-100/50 rounded-xl border border-yellow-700/30 dark-mode:border-yellow-700/30 light-mode:border-amber-600/30">
-                    <h2 class="text-2xl font-bold text-yellow-400 dark-mode:text-yellow-400 light-mode:text-amber-600">Atividades</h2>
-                    <p class="text-slate-300 dark-mode:text-slate-300 light-mode:text-slate-700">Teatro de rua, artes visuais, música, dança, literatura e performances. Sempre focando na integração entre arte e comunidade, incentivando criação, fruição e reflexão crítica sobre as diversas formas de expressão artística.</p>
+                <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800">
+                    <p class="text-xs uppercase tracking-[0.2em] text-slate-400">Atuação</p>
+                    <h3 class="text-xl font-semibold text-brand-100">Multilinguagens</h3>
+                    <p class="text-slate-400 text-sm">Teatro, música, audiovisual, artes visuais, dança.</p>
                 </div>
-            </div>
-
-            <div class="space-y-4 mt-8 p-6 bg-blue-900/30 dark-mode:bg-blue-900/30 light-mode:bg-amber-100/30 rounded-xl border border-yellow-700/30 dark-mode:border-yellow-700/30 light-mode:border-amber-600/30">
-                <h2 class="text-2xl font-bold text-yellow-400 dark-mode:text-yellow-400 light-mode:text-amber-600">Sobre o NUARTE</h2>
-                <p class="text-slate-300 dark-mode:text-slate-300 light-mode:text-slate-700 leading-relaxed">
-                    O Núcleo de Arte (NUARTE) do Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Norte – Campus Santa Cruz é um espaço institucional dedicado à promoção, articulação e fomento de atividades artísticas, culturais e formativas voltadas para estudantes, servidores e a comunidade local.
-                </p>
-                <p class="text-slate-300 dark-mode:text-slate-300 light-mode:text-slate-700 leading-relaxed">
-                    As atividades desenvolvidas incluem iniciativas em diversas linguagens artísticas com foco na integração entre arte e comunidade, incentivando criação, fruição e reflexão crítica. O NUARTE também promove a participação de estudantes em processos formativos e produções culturais, oferecendo vagas de bolsistas para apoio às atividades de extensão, além de parcerias com artistas e coletivos regionais.
-                </p>
-                <p class="text-slate-300 dark-mode:text-slate-300 light-mode:text-slate-700 leading-relaxed">
-                    Por meio dessas ações, o Núcleo de Arte busca fortalecer a presença da arte no ambiente educacional e social, incentivando criatividade, protagonismo estudantil e valorização da diversidade cultural do Trairi e do Rio Grande do Norte.
-                </p>
-            </div>
-
-            <div class="space-y-6 mt-8">
-                <div class="text-center mb-6">
-                    <h2 class="text-3xl font-bold text-yellow-400 dark-mode:text-yellow-400 light-mode:text-amber-600 mb-2">Objetivo do Projeto</h2>
-                </div>
-                <div class="p-6 bg-blue-900/30 dark-mode:bg-blue-900/30 light-mode:bg-amber-100/30 rounded-xl border border-yellow-700/30 dark-mode:border-yellow-700/30 light-mode:border-amber-600/30">
-                    <p class="text-slate-300 dark-mode:text-slate-300 light-mode:text-slate-700 leading-relaxed text-lg">
-                        Este projeto tem o objetivo de promover acessos à arte na Região do Trairi Potiguar, por meio de ações de formação, produção e apreciação artística e cultural, visando fortalecer e valorizar o conhecimento artístico e estético para a formação de estudantes de escolas públicas da cidade Santa Cruz/RN, estudantes do Campus, bem como contribuir com a formação de artistas da Região.
-                    </p>
+                <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800">
+                    <p class="text-xs uppercase tracking-[0.2em] text-slate-400">Impacto</p>
+                    <h3 class="text-xl font-semibold text-brand-100">Comunidade</h3>
+                    <p class="text-slate-400 text-sm">Projetos com estudantes, servidores e parceiros.</p>
                 </div>
             </div>
 
-            <div class="space-y-4 mt-8">
-                <h2 class="text-3xl font-bold text-yellow-400 dark-mode:text-yellow-400 light-mode:text-amber-600 text-center mb-6">Áreas de Atuação</h2>
-                
-                <div class="p-6 bg-blue-900/50 dark-mode:bg-blue-900/50 light-mode:bg-amber-100/50 rounded-xl border border-yellow-700/30 dark-mode:border-yellow-700/30 light-mode:border-amber-600/30">
-                    <h3 class="text-2xl font-bold text-yellow-300 dark-mode:text-yellow-300 light-mode:text-amber-700 mb-3">Teatro</h3>
-                    <p class="text-slate-300 dark-mode:text-slate-300 light-mode:text-slate-700 leading-relaxed">
-                        Aulas do Grupo de Teatro Catarse, apresentações do espetáculo de teatro musical "Roda Viva" e realização da Mostra de Teatro dos 2º anos dos cursos técnicos integrados.
-                    </p>
+            <div class="grid md:grid-cols-[1.2fr_0.8fr] gap-8">
+                <div class="space-y-4 bg-slate-900/60 border border-slate-800 rounded-2xl p-6">
+                    <p class="text-xs uppercase tracking-[0.2em] text-brand-300">O que fazemos</p>
+                    <h2 class="text-2xl font-semibold text-brand-100">Extensão e produção artística</h2>
+                    <p class="text-slate-300 leading-relaxed">Oficinas, mostras, apresentações e ações culturais no campus e na região.</p>
+                    <p class="text-slate-300 leading-relaxed">Servidores, bolsistas, voluntários e parceiros trabalham juntos.</p>
                 </div>
-
-                <div class="p-6 bg-blue-900/50 dark-mode:bg-blue-900/50 light-mode:bg-amber-100/50 rounded-xl border border-yellow-700/30 dark-mode:border-yellow-700/30 light-mode:border-amber-600/30">
-                    <h3 class="text-2xl font-bold text-yellow-300 dark-mode:text-yellow-300 light-mode:text-amber-700 mb-3">Música</h3>
-                    <p class="text-slate-300 dark-mode:text-slate-300 light-mode:text-slate-700 leading-relaxed">
-                        Por meio de parceria com a Associação Musical de Santa Cruz (ASSOMUSC), serão ofertadas formações em instrumentos diversos para músicos, objetivando fortalecer a formação de artistas da Região, bem como apreciações estéticas para estudantes de escolas públicas. Também será desenvolvida oficina de produção cultural para artistas e produtores culturais da região.
-                    </p>
-                </div>
-
-                <div class="p-6 bg-blue-900/50 dark-mode:bg-blue-900/50 light-mode:bg-amber-100/50 rounded-xl border border-yellow-700/30 dark-mode:border-yellow-700/30 light-mode:border-amber-600/30">
-                    <h3 class="text-2xl font-bold text-yellow-300 dark-mode:text-yellow-300 light-mode:text-amber-700 mb-3">Artes Visuais</h3>
-                    <p class="text-slate-300 dark-mode:text-slate-300 light-mode:text-slate-700 leading-relaxed">
-                        Realização da V edição Mostra Coletiva, promovendo continuidade ao incentivo à produção e apreciação estéticas, fortalecendo a expressão visual e a criatividade dos artistas da região.
-                    </p>
-                </div>
-
-                <div class="p-6 bg-blue-900/50 dark-mode:bg-blue-900/50 light-mode:bg-amber-100/50 rounded-xl border border-yellow-700/30 dark-mode:border-yellow-700/30 light-mode:border-amber-600/30">
-                    <h3 class="text-2xl font-bold text-yellow-300 dark-mode:text-yellow-300 light-mode:text-amber-700 mb-3">🎬 Audiovisual</h3>
-                    <p class="text-slate-300 dark-mode:text-slate-300 light-mode:text-slate-700 leading-relaxed">
-                        Promoção de apreciações e debates de obras cinematográficas através do Cine Conexão, incentivando a expressão artística em múltiplas linguagens, por meio do Show de Talentos.
-                    </p>
-                </div>
-
-                <div class="p-6 bg-blue-900/50 dark-mode:bg-blue-900/50 light-mode:bg-amber-100/50 rounded-xl border border-yellow-700/30 dark-mode:border-yellow-700/30 light-mode:border-amber-600/30">
-                    <h3 class="text-2xl font-bold text-yellow-300 dark-mode:text-yellow-300 light-mode:text-amber-700 mb-3">📚 Repertório e Diversidade</h3>
-                    <p class="text-slate-300 dark-mode:text-slate-300 light-mode:text-slate-700 leading-relaxed">
-                        Levando em consideração a importância do acesso à diversidade de linguagens artísticas e ampliação de repertório cultural, o projeto desenvolve atividades nas áreas do teatro, música, audiovisual, artes visuais e produção cultural, sempre buscando integrar as dimensões do ensino e da extensão.
-                    </p>
+                <div class="space-y-3 bg-slate-900/60 border border-slate-800 rounded-2xl p-6">
+                    <h3 class="text-xl font-semibold text-brand-100">Destaques</h3>
+                    <ul class="space-y-3 text-sm text-slate-300">
+                        <li class="flex gap-3"><span class="text-brand-400">•</span> Teatro e mostras dos cursos.</li>
+                        <li class="flex gap-3"><span class="text-brand-400">•</span> Formações musicais em parceria.</li>
+                        <li class="flex gap-3"><span class="text-brand-400">•</span> Oficinas de produção cultural e audiovisual.</li>
+                        <li class="flex gap-3"><span class="text-brand-400">•</span> Mostra Coletiva de Artes Visuais.</li>
+                    </ul>
                 </div>
             </div>
 
-            <div class="space-y-4 mt-8 p-6 bg-blue-900/30 dark-mode:bg-blue-900/30 light-mode:bg-amber-100/30 rounded-xl border border-yellow-700/30 dark-mode:border-yellow-700/30 light-mode:border-amber-600/30">
-                <h2 class="text-2xl font-bold text-yellow-400 dark-mode:text-yellow-400 light-mode:text-amber-600 mb-4">👥 Equipe Responsável</h2>
-                <p class="text-slate-300 dark-mode:text-slate-300 light-mode:text-slate-700 leading-relaxed">
-                    As ações serão desenvolvidas por servidores (as) de diversas áreas de conhecimento (Língua Portuguesa, Sociologia, Inglês, Arte e História), músicos da ASSOMUSC e alunos (as) voluntários (as) e bolsistas, que serão selecionados (as), sempre buscando-se a articulação entre as dimensões do ensino e da extensão.
-                </p>
+            <div class="space-y-6">
+                <div class="flex flex-wrap items-center justify-between gap-4">
+                    <div>
+                        <p class="text-xs uppercase tracking-[0.2em] text-brand-300">Áreas de atuação</p>
+                        <h2 class="text-2xl font-semibold text-brand-100">Pilares criativos</h2>
+                    </div>
+                    <a href="figurinos.html" class="text-sm text-brand-300 hover:text-brand-200 transition">Veja o acervo →</a>
+                </div>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800">
+                        <h3 class="text-lg font-semibold text-brand-100">Teatro</h3>
+                        <p class="text-slate-400 text-sm">Grupo Catarse, espetáculos musicais e mostras dos cursos integrados.</p>
+                    </div>
+                    <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800">
+                        <h3 class="text-lg font-semibold text-brand-100">Música</h3>
+                        <p class="text-slate-400 text-sm">Formações instrumentais com ASSOMUSC e oficinas de produção cultural.</p>
+                    </div>
+                    <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800">
+                        <h3 class="text-lg font-semibold text-brand-100">Artes Visuais</h3>
+                        <p class="text-slate-400 text-sm">Mostra Coletiva e incentivo à expressão visual da região.</p>
+                    </div>
+                    <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800">
+                        <h3 class="text-lg font-semibold text-brand-100">Audiovisual</h3>
+                        <p class="text-slate-400 text-sm">Cine Conexão e debates para ampliar repertório e visão crítica.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 items-start">
+                <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 space-y-3">
+                    <p class="text-xs uppercase tracking-[0.2em] text-brand-300">Objetivo do projeto</p>
+                    <h2 class="text-2xl font-semibold text-brand-100">Arte como formação e presença social</h2>
+                    <p class="text-slate-300 leading-relaxed">Promover acesso à arte no Trairi, fortalecer a formação estética e apoiar artistas da região.</p>
+                </div>
+                <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 space-y-3">
+                    <p class="text-xs uppercase tracking-[0.2em] text-brand-300">Equipe</p>
+                    <h2 class="text-2xl font-semibold text-brand-100">Multidisciplinar e colaborativa</h2>
+                    <p class="text-slate-300 leading-relaxed">Servidores, músicos parceiros, bolsistas e voluntários conectando ensino e extensão.</p>
+                </div>
             </div>
         </section>
     </main>
+
+    <footer class="border-t border-slate-900 bg-slate-950">
+        <div class="max-w-6xl mx-auto px-4 py-6 flex flex-wrap items-center justify-between text-sm text-slate-500">
+            <span>ATENA • NUARTE · IFRN Campus Santa Cruz</span>
+            <div class="flex gap-4">
+                <a class="hover:text-brand-300 transition" href="index.html">Início</a>
+                <a class="hover:text-brand-300 transition" href="figurinos.html">Acervo</a>
+                <a class="hover:text-brand-300 transition" href="login.html">Login</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

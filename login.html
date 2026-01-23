@@ -4,40 +4,87 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="ATENA - Sistema de Gestão do NUARTE - IFRN Campus Santa Cruz">
-  <title>ATENA - NUARTE (IFRN Campus Santa Cruz) | Login</title>
+  <title>ATENA • NUARTE | Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { display: ['"Space Grotesk"', 'system-ui', 'sans-serif'] },
+          colors: { brand: { 50: '#fefce8', 100: '#fef9c3', 400: '#facc15', 500: '#eab308' } }
+        }
+      }
+    }
+  </script>
 </head>
-<body class="h-full bg-gradient-to-b from-blue-950 to-slate-950 text-slate-100">
-  <nav class="sticky top-0 z-20 backdrop-blur bg-blue-950/80 border-b border-yellow-700">
-    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
-      <div class="font-semibold tracking-wide text-yellow-400 text-lg">Atena</div>
-      <ul class="flex gap-5 text-sm">
-        <li><a class="hover:text-yellow-400 transition" href="index.html">Início</a></li>
-        <li><a class="text-yellow-400 font-semibold" aria-current="page" href="login.html">Login</a></li>
-        <li><a class="hover:text-yellow-400 transition" href="about.html">Sobre Nós</a></li>
-      </ul>
+<body class="h-full bg-slate-950 text-slate-100 font-display">
+  <nav class="sticky top-0 z-30 backdrop-blur bg-slate-950/80 border-b border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-brand-500/15 border border-brand-500/40 flex items-center justify-center text-brand-400 font-bold">AT</div>
+        <div>
+          <p class="text-sm text-slate-300">Atena • NUARTE</p>
+          <p class="text-xs text-slate-500">IFRN Campus Santa Cruz</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-6 text-sm font-medium">
+        <a class="hover:text-brand-400 transition" href="index.html">Início</a>
+        <a class="hover:text-brand-400 transition" href="figurinos.html">Acervo</a>
+        <a class="text-brand-400" aria-current="page" href="login.html">Login</a>
+        <a class="hover:text-brand-400 transition" href="about.html">Sobre</a>
+      </div>
     </div>
   </nav>
 
-  <main class="min-h-[calc(100vh-64px)] flex items-center justify-center px-4 py-12">
-    <section class="w-full max-w-md bg-blue-900 border border-yellow-700 rounded-2xl shadow-2xl shadow-yellow-500/10 p-8 space-y-4">
-      <div class="space-y-1 text-center">
-        <p class="text-2xl mb-2"></p>
-        <p class="text-xs uppercase tracking-[0.2em] text-yellow-400">Acesso Restrito</p>
-        <h1 class="text-2xl font-bold">Autenticação</h1>
-        <p class="text-sm text-slate-400">Faça login para acessar o sistema ATENA.</p>
+  <main class="min-h-[calc(100vh-64px)] flex items-center justify-center px-4 py-12 relative overflow-hidden">
+    <div class="absolute inset-0 -z-10 opacity-60">
+      <div class="w-[26rem] h-[26rem] bg-brand-500/10 blur-3xl rounded-full absolute -top-16 -left-8"></div>
+      <div class="w-[30rem] h-[30rem] bg-sky-500/10 blur-3xl rounded-full absolute bottom-0 right-0"></div>
+    </div>
+    <section class="w-full max-w-5xl grid lg:grid-cols-[1.1fr_0.9fr] gap-8 items-center">
+      <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 md:p-8 shadow-2xl shadow-brand-500/10 space-y-5">
+        <div class="flex items-center gap-3">
+          <div class="px-3 py-1 rounded-full bg-brand-500/15 border border-brand-500/30 text-brand-300 text-xs font-semibold uppercase tracking-[0.2em]">Acesso</div>
+        </div>
+        <h1 class="text-3xl md:text-4xl font-bold text-brand-100 leading-tight">Login do bolsista</h1>
+        <p class="text-slate-300 text-lg">Libera cadastro, edição e limpeza do acervo.</p>
+        <div class="grid md:grid-cols-2 gap-3 text-sm">
+          <div class="p-4 rounded-xl bg-slate-800/60 border border-slate-700">
+            <p class="text-xs uppercase text-slate-400 tracking-[0.2em]">Permissões</p>
+            <p class="text-slate-200">Edição só com login.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-800/60 border border-slate-700">
+            <p class="text-xs uppercase text-slate-400 tracking-[0.2em]">Segurança</p>
+            <p class="text-slate-200">Encerre a sessão após o uso.</p>
+          </div>
+        </div>
       </div>
-      <form class="space-y-4" method="POST" action="login.php">
-        <label class="block space-y-1" for="email">
-          <span class="text-sm font-medium text-yellow-200">Email</span>
-          <input id="email" type="email" name="email" required class="w-full px-3 py-2 rounded-xl bg-blue-950 border border-yellow-700 focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/40 outline-none transition" />
-        </label>
-        <label class="block space-y-1" for="senha">
-          <span class="text-sm font-medium text-yellow-200">Senha</span>
-          <input id="senha" type="password" name="senha" required class="w-full px-3 py-2 rounded-xl bg-blue-950 border border-yellow-700 focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/40 outline-none transition" />
-        </label>
-        <button type="submit" class="w-full py-3 rounded-xl bg-gradient-to-r from-yellow-400 to-yellow-500 text-blue-950 font-semibold shadow-lg shadow-yellow-500/30 hover:shadow-yellow-400/40 transition">Acessar</button>
-      </form>
+
+      <div class="bg-slate-900/70 border border-slate-800 rounded-2xl p-6 md:p-8 shadow-2xl shadow-brand-500/10 space-y-5">
+        <div class="space-y-1 text-left">
+          <p class="text-xs uppercase tracking-[0.2em] text-brand-300">Autenticação</p>
+          <h2 class="text-2xl font-semibold">Entrar no ATENA</h2>
+          <p class="text-sm text-slate-400">Informe usuário e senha fornecidos pelo NUARTE.</p>
+        </div>
+        <form class="space-y-4" method="POST" action="login.php">
+          <label class="block space-y-1" for="email">
+            <span class="text-sm font-medium text-slate-200">Email</span>
+            <input id="email" type="email" name="email" required class="w-full px-3 py-3 rounded-xl bg-slate-950 border border-slate-700 focus:border-brand-400 focus:ring-2 focus:ring-brand-400/40 outline-none transition" />
+          </label>
+          <label class="block space-y-1" for="senha">
+            <span class="text-sm font-medium text-slate-200">Senha</span>
+            <input id="senha" type="password" name="senha" required class="w-full px-3 py-3 rounded-xl bg-slate-950 border border-slate-700 focus:border-brand-400 focus:ring-2 focus:ring-brand-400/40 outline-none transition" />
+          </label>
+          <button type="submit" class="w-full py-3 rounded-xl bg-brand-500 text-slate-900 font-semibold shadow-lg shadow-brand-500/20 hover:bg-brand-400 transition">Acessar</button>
+        </form>
+        <div class="text-xs text-slate-500 flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-brand-400"></span>
+          Em caso de dúvidas, procure a coordenação do NUARTE.
+        </div>
+      </div>
     </section>
   </main>
 </body>
